@@ -1,6 +1,7 @@
 package io.github.orionlibs.orion_data;
 
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.TimeZone;
 import org.apache.commons.io.IOUtils;
 
@@ -22,5 +23,11 @@ public class ATest
         {
             return "";
         }
+    }
+
+
+    protected InputStream loadResourceAsStream(String fileLocation)
+    {
+        return this.getClass().getResourceAsStream(fileLocation);
     }
 }
